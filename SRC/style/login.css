@@ -1,33 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'arial', sans-serif;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #877a7a;
-}
-
-#login {
-    width: 100%;
-    max-width: 414px;
-    height: 956px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-}
-
 #login img {
     width: 200px;
     display: block;
