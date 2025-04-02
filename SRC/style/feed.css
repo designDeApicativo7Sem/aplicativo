@@ -17,17 +17,32 @@ body {
     background: #FFf;
 }
 
-#tela {
+.containerGrupo {
+    width: 410px;
+    height: 250px;
+    
+}
+
+.tituloGrupo {
     width: 100%;
-    height:100% ;
-    max-width: 430px;
-    max-height: 932px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 30px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.infoGrupo {
+    height: 210px;
+    width: 100%;
+    background-color: red;
+}
+
+.containerFeed {
+    width: 390px;
+    height: 430px;
+    background-color: green;
 }
