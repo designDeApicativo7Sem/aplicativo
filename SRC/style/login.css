@@ -6,10 +6,8 @@
     border-radius: 8px;
 }
 
-.card-header{
-
-
-
+.card-header {
+    text-align: center;
 }
 
 .card-content-area {
