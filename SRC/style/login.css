@@ -2,14 +2,14 @@
     width: 300px;
     height: 300px;
     display: block;
-    margin: 0 auto 50px;   
+    margin: 50px 0px 50px;   
     border-radius: 8px;
 }
 
 .loginContainer{
     display: flex;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     width: 100%;
@@ -19,6 +19,13 @@
 .card-header {
     text-align: center;
 }
+
+.card-header h2{
+    font-size: 15pt;
+    line-height: 50px;
+}
+
+
 
 .card-content-area {
     text-align: left;
