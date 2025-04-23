@@ -32,17 +32,32 @@ body {
     justify-content: center;
     align-content: center;
     align-items: center;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
-.infoGrupo {
-    height: 210px;
-    width: 100%;
-    background-color: red;
-}
 
 .containerFeed {
     width: 390px;
     height: 430px;
     background-color: green;
+}
+
+.infoGrupo {
+    height: 210px;
+    width: 100%;
+    /* background-color: red; */
+    /* border: 2px solid red;
+    border-radius: 40px;  */
+}
+
+.fotoGrupo{
+    background-color: #a5b4c2;
+    height: 70%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.contidosInfoGrupo{
+    background-color: #bccbd8;
+    height: 30%;
+    border-radius: 0px 0px 15px 15px;
 }
