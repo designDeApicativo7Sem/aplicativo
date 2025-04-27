@@ -3,8 +3,8 @@ window.document.getElementById("submit").addEventListener("click", function() {
     main();
 });
 
-function main(){
-    let url = "urlAPI.com.br/"
+async function main(){
+    let url = "https://opulent-dollop-xjx4pj47v7ghv5xp-3000.app.github.dev"
     let credential = null;
     let params = null;
 
@@ -14,45 +14,54 @@ function main(){
     if(email && password) {
         params = new URLSearchParams({
             email: email,
-            password: password
+            senha: password
         });
     } else {
+        alert("Preencha todos os campos");
         // COLOCAR INTERAÇÃO INDICANDO CAMPOS VAZIOS
     }
 
-    credential = verifyCredentials(url, params);
+    credential = await verifyCredentials(url, params);
 
     if (credential) {
+
+        await localStorageData(credential);
         redirectToFeed()
+
     } else {
         // COLOCAR INTERAÇÃO INDICANDO CREDENCIAIS INVALIDAS
     }
 }
 
 async function verifyCredentials(url, params) {
+    try {
+        const response = await fetch(`${url}/usuario?${params.toString()}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+        });
 
-    await fetch(`${url}/api/users?${params.toString()}`, {
-        method: "get",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-    }).then(response => {
         if (response.status === 200) {
-            let data = response.json();
-            return data;
+            const data = await response.json(); 
+            return data[0];
         } else {
-            // return null;
-            let data = {
-                "id": 1,
-                "name": "Lucas"
-                }
-            return data // provisório enquanto rota api nao pronta
+            console.error("Erro na requisição:", response.status);
+            return null;
         }
-    })
+    } catch (error) {
+        console.error("Erro ao fazer a requisição:", error);
+        return null;
+    }
 }
 
 function redirectToFeed() {
     window.location.href = "../html/feed.html";
+}
+
+async function localStorageData(data) {
+    localStorage.setItem("dataUser", JSON.stringify(data));
+    return true
 }
 
