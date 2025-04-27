@@ -55,6 +55,14 @@
     outline: none;
 }
 
+#error-message {
+    display: none; 
+    color: #c30014;           
+    font-size: 14px;
+    text-align: center;
+}
+
+
 .card-footer {
     margin-top: 30px;
 }

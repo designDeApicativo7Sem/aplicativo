@@ -10,6 +10,10 @@ function main(){
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const errorMessage = document.getElementById("error-message");
+
+    errorMessage.style.display = "none";
+    errorMessage.textContent = "";
 
     if(email && password) {
         params = new URLSearchParams({
@@ -17,7 +21,9 @@ function main(){
             password: password
         });
     } else {
-        // COLOCAR INTERAÇÃO INDICANDO CAMPOS VAZIOS
+        errorMessage.style.display = "block";
+        errorMessage.textContent = "Por favor, preencha todos os campos.";
+        return;
     }
 
     credential = verifyCredentials(url, params);
@@ -25,12 +31,20 @@ function main(){
     if (credential) {
         redirectToFeed()
     } else {
-        // COLOCAR INTERAÇÃO INDICANDO CREDENCIAIS INVALIDAS
+        errorMessage.style.display = "block";
+
+        if (credential.errorType === "email") {
+            errorMessage.textContent = "Email incorreto.";
+        } else if (credential.errorType === "password") {
+            errorMessage.textContent = "Senha incorreta.";
+        } else {
+            errorMessage.textContent = "Usuário inválido.";
+        }
     }
 }
 
 async function verifyCredentials(url, params) {
-
+    
     await fetch(`${url}/api/users?${params.toString()}`, {
         method: "get",
         headers: {
@@ -51,6 +65,7 @@ async function verifyCredentials(url, params) {
         }
     })
 }
+
 
 function redirectToFeed() {
     window.location.href = "../html/feed.html";
