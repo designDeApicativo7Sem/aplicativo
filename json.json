@@ -1,0 +1,64 @@
+{
+  "usuario": [
+    {
+      "id_usuario": 1,
+      "nome": "João Silva",
+      "CPF": "12345678900",
+      "email": "joao@email.com",
+      "senha": "1234",
+      "data_cadastro": "2025-04-01T10:00:00Z"
+    }
+  ],
+  "feed": [
+    {
+      "id_feed": 1,
+      "data_publi": "2025-04-20T12:30:00Z",
+      "id_usuario": 1,
+      "conteudo": "Treino top hoje!",
+      "tempo_treino": "01:00:00",
+      "foto": "foto1.jpg"
+    }
+  ],
+  "coment_feed": [
+    {
+      "id_coment": 1,
+      "conteudo_coment": "Boa!",
+      "id_usuario": 1,
+      "data_coment": "2025-04-20T14:00:00Z"
+    }
+  ],
+  "grupo": [
+    {
+      "id_grupo": 1,
+      "nome_grupo": "Galera do Cross",
+      "data_criacao": "2025-04-01T09:00:00Z"
+    }
+  ],
+  "grupo_membro": [
+    {
+      "id_controle": 1,
+      "id_usuario": 1,
+      "id_grupo": 1,
+      "data_entrada": "2025-04-10T08:00:00Z"
+    }
+  ],
+  "reacao": [
+    {
+      "id_reacao": 1,
+      "nome_reacao": "Curtida"
+    },
+    {
+      "id_reacao": 2,
+      "nome_reacao": "Fogo"
+    }
+  ],
+  "reacao_control": [
+    {
+      "id_controle": 1,
+      "id_publi": 1,
+      "id_coment": null,
+      "id_reacao": 1,
+      "data_reacao": "2025-04-20T15:00:00Z"
+    }
+  ]
+}
