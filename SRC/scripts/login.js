@@ -10,6 +10,10 @@ async function main(){
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const errorMessage = document.getElementById("error-message");
+
+    errorMessage.style.display = "none";
+    errorMessage.textContent = "";
 
     if(email && password) {
         params = new URLSearchParams({
@@ -17,8 +21,9 @@ async function main(){
             senha: password
         });
     } else {
-        alert("Preencha todos os campos");
-        // COLOCAR INTERAÇÃO INDICANDO CAMPOS VAZIOS
+        errorMessage.style.display = "block";
+        errorMessage.textContent = "Por favor, preencha todos os campos.";
+        return;
     }
 
     credential = await verifyCredentials(url, params);
@@ -29,7 +34,15 @@ async function main(){
         redirectToFeed()
 
     } else {
-        // COLOCAR INTERAÇÃO INDICANDO CREDENCIAIS INVALIDAS
+        errorMessage.style.display = "block";
+
+        if (credential.errorType === "email") {
+            errorMessage.textContent = "Email incorreto.";
+        } else if (credential.errorType === "password") {
+            errorMessage.textContent = "Senha incorreta.";
+        } else {
+            errorMessage.textContent = "Usuário inválido.";
+        }
     }
 }
 
