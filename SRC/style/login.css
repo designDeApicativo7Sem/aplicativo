@@ -16,6 +16,13 @@
     height: 100%;
 }
 
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-header {
     text-align: center;
 }
@@ -56,10 +63,13 @@
 }
 
 #error-message {
-    display: none; 
-    color: #c30014;           
+    display: none;
+    color: #c30014;
     font-size: 14px;
-    text-align: center;
+    align-items: center;
+    max-width: 200px;
+
+
 }
 
 

@@ -12,24 +12,25 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background: #FFf;
+    margin: 0px;
 }
 
 #tela {
-    width: 100%;
-    height:100% ;
-    max-width: 430px;
-    max-height: 932px;
+    /* width: 100%;
+    height: 100% ; */
+    /* min-width: 200px; */
+    /* min-height: 700px; */
     background: white;
     border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); */
     text-align: center;
     padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 10px;
+    /* padding: 20px 50px 100px 50px; */
 }
