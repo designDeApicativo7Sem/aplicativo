@@ -4,7 +4,7 @@ window.document.getElementById("submit").addEventListener("click", function() {
 });
 
 async function main(){
-    let url = "https://opulent-dollop-xjx4pj47v7ghv5xp-3000.app.github.dev/"
+    let url = "https://6ndzjs07-5502.brs.devtunnels.ms/"
     let credential = null;
     let params = null;
 
