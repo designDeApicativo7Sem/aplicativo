@@ -5,7 +5,7 @@ window.document.getElementById("submit").addEventListener("click", function() {
 });
 
 async function main(){
-    let url = "https://6ndzjs07-5502.brs.devtunnels.ms/"
+    let url = "https://designdeapicativo7sem.github.io/aplicativo/"
     let credential = null;
     let params = null;
 
