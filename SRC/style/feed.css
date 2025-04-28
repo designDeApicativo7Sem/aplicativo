@@ -1,49 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif !important;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    height: 100vh;
-    width: 100vw;
-    background: #FFf;
-}
-
 .containerGrupo {
-    width: 410px;
-    height: 250px;
+    width: 90vw;
+    height: 32vh;
+
+    position: fixed; /* Mantém a posição fixa */
+    top: 6vh;
+    left: 5vw;
     
 }
 
 .tituloGrupo {
-    width: 100%;
-    height: 20px;
+    
+    /* width: 100%; */
+    height: 5vh;
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
-    /* background-color: blue; */
 }
 
 
 .containerFeed {
-    width: 390px;
-    height: 430px;
-    background-color: green;
+    position: relative; /* Permite que ele role */
+    top: 30vh; /* Ajuste conforme necessário */
+    left: 0vw;
+    width: 80vw;
+    height: 45vh;
+    overflow-y: auto; /* Habilita o scroll vertical */
+    /* background-color: green; */
 }
 
 .infoGrupo {
-    height: 210px;
+    height: 20vh;
     width: 100%;
     /* background-color: red; */
     /* border: 2px solid red;
@@ -52,12 +43,69 @@ body {
 
 .fotoGrupo{
     background-color: #a5b4c2;
-    height: 70%;
+    height: 15vh;
     border-radius: 15px 15px 0px 0px;
 }
 
 .contidosInfoGrupo{
     background-color: #bccbd8;
-    height: 30%;
+    height: 5vh;
     border-radius: 0px 0px 15px 15px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d3d3d3; /* Cor de fundo do card */
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-avatar {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.card-date {
+    font-size: 12px;
+    color: #555;
+    margin: 0;
+}
+
+.card-badge {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

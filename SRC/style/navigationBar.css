@@ -1,7 +1,15 @@
 /* From Uiverse.io by vinodjangid07 */
+.footer{
+  height: 10vh;
+
+  position: fixed; /* Mantém a posição fixa */
+  top: 85vh; /* Ajuste conforme necessário */
+  left: (100% / 2);
+}
+
 .navigation-card {
-    width: fit-content;
-    height: fit-content;
+    /* width: fit-content; */
+    /* height: fit-content; */
     display: flex;
     align-items: center;
     justify-content: center;
