@@ -1,6 +1,7 @@
 
 window.document.getElementById("submit").addEventListener("click", function() {
-    main();
+    // main();
+    redirectToFeed(); //inverter dps, provisório
 });
 
 async function main(){
