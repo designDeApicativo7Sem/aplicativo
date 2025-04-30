@@ -6,7 +6,7 @@
     border-radius: 100px;
 }
 
-.loginContainer{
+.cadastroContainer{
     display: flex;
     align-content: center;
     justify-content: flex-start;
@@ -23,16 +23,6 @@
     align-items: center;
 }
 
-.card-header {
-    text-align: center;
-}
-
-.card-header h2{
-    font-size: 15pt;
-    line-height: 50px;
-}
-
-
 
 .card-content-area {
     text-align: left;
@@ -44,12 +34,12 @@
     font-weight: bold;
     color: #333;
     display: block;
-    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 .card-content-area input {
-    width: 100%;
-    padding: 12px;
+    width: 100%;    
+    line-height: 2.4;
     border: 2px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
@@ -62,17 +52,6 @@
     outline: none;
 }
 
-#error-message {
-    display: none;
-    color: #c30014;
-    font-size: 14px;
-    align-items: center;
-    max-width: 200px;
-
-
-}
-
-
 .card-footer {
     margin-top: 30px;
 }
@@ -83,37 +62,13 @@
     background-color: #000000;
     color: white;
     font-size: 18px;
-    border: none;
-    border-radius: 25px;
+    border: none;    
+    border-radius: 20px;
     cursor: pointer;    
 }
 
 .card-footer .submit:hover {
-    background-color: #030305;
-}
-
-.recuperar_senha {
-    display: block;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #000000;
-    text-decoration: none;     
-}
-
-.recuperar_senha:hover {
-    color: #000000;
-    text-decoration: underline;
-}
-
-.cadastro {
-    display: block;
-    margin-top: 1px;
-    font-size: 14px;
-    color: #000000;
-    text-decoration: none; 
-}
-
-.cadastro:hover {
-    color: #080808;
-    text-decoration: underline;
+    background-color: #292930;
+    border: none;    
+    border-radius: 20px;
 }

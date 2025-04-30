@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Teste</title>
+    <title>Cadastro Teste</title>
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <link rel="stylesheet" href="../style/iphoneTemplate.css">
-    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="../style/cadastro.css">
 
     <link rel="icon" href="./SRC/Imagens/gym.png" type="image/x-icon">
     <link rel="manifest" href="../manifest.json">
@@ -21,18 +21,20 @@
 
 <body>
     <div id="tela">
-        <div class="loginContainer">
-
-
-            <!-- <div class="card-header">
-                <h2> GymCaps</h2>
-            </div> -->
+        <div class="cadastroContainer">
+            
             
             <img id="logo" src="../Imagens/gym.png" alt="Logo">
 
 
 
             <div class="card">
+
+                <div class="card-content">
+                    <div class="card-content-area">
+                        <label for="name"> Nome do Usuário</label>
+                        <input type="text" id="name" autocomplete="off">
+                    </div>
 
                 <div class="card-content">
                     <div class="card-content-area">
@@ -47,24 +49,13 @@
 
                     </div>
 
-                </div>
+                    <div class="card-content-area">
+                        <label for="cpf">  CPF  </label>
+                        <input type="text" name="cpf" \pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \ id="cpf" name="cpf">
+                    </div>
 
-                <div id="error-message"></div>
-
-                <div class="card-footer">
-                    <input type="submit" value="Login" class="submit" id="submit">
-                    <a href="#" class="recuperar_senha"> Esqueceu a sua senha?</a>
-                </div>
-            </div>
-
-            <div class="card-footer">                
-                <a href="#" class="cadastro" id="register"> Não tem cadastro?</a>
-            </div>
-
+                    <div class="card-footer">
+                        <input type="submit" value="Registra-se" class="submit" id="submit">
+                    </div>
             </div>
     </div>
-
-    <script src="../scripts/login.js"></script>
-</body>
-
-</html>
