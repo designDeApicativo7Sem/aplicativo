@@ -1,11 +1,11 @@
 
 window.document.getElementById("submit").addEventListener("click", function() {
-    // main();
-    redirectToFeed(); //inverter dps, provisório
+    main();
+    // redirectToFeed(); //inverter dps, provisório
 });
 
 async function main(){
-    let url = "https://designdeapicativo7sem.github.io/aplicativo/"
+    let url = "https://apex.oracle.com/pls/apex/projeto_7/apigym/"
     let credential = null;
     let params = null;
 
@@ -19,8 +19,8 @@ async function main(){
 
     if(email && password) {
         params = new URLSearchParams({
-            username: email,
-            password: password
+            email: email,
+            senha: password
         });
 
     } else {
@@ -33,7 +33,7 @@ async function main(){
 
     console.log(credential)
 
-    if (credential.message == "Login successful") {
+    if (credential.status == 200) {
 
         await localStorageData(credential);
         redirectToFeed()
@@ -46,18 +46,21 @@ async function main(){
 
 async function verifyCredentials(url, params) {
 
-    const response = await fetch(`${url}login?${params.toString()}`, {
+    const response = await fetch(`${url}usuario/?${params.toString()}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
         },
     });
+    
 
     const data = await response.json(); 
-    return data;
 
-}
+    return { "status": response.status,
+            "userData": data.items[0]
+        }
+    }
 
 
 function redirectToFeed() {

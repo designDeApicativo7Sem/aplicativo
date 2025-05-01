@@ -158,3 +158,24 @@
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+#background{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.5); /* Cinza escuro com 50% de opacidade */
+    z-index: 9999; /* Garante que o fundo esteja acima de outros elementos */
+}
+
+
+
+
+
+
+.oculto{
+    display: none;
+}
+
