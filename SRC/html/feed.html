@@ -187,6 +187,38 @@
 
         <div id="background" class="oculto"></div>
     </div>
+
+    <div id="cardPost" class="oculto">
+
+        <h2>Registro de Treino</h2>
+
+        <div class="formContido">
+            <label for="foto">Foto:</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+        </div>
+
+        <div class="formContido">
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data">
+        </div>
+
+        <div class="formContido">
+            <label for="tempo">Tempo de treino (min):</label>
+            <input type="number" id="tempo" name="tempo" min="1">
+        </div>
+
+        <div class="formContido">
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" rows="4"></textarea>
+        </div>
+
+        <button type="button" id="registrar">Registrar</button>
+        <button type="button" id="cancelar">Cancelar</button>
+
+
+    </div>
+
+    <script src="../scripts/feed.js"></script>
 </body>
 
 </html>
