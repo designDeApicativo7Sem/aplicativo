@@ -37,7 +37,7 @@ async function main(){
 
     console.log(credential)
 
-    if (credential.status == 200) {
+    if (credential.userData) {
 
         await localStorageData(credential);
         redirectToFeed()
