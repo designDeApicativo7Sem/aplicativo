@@ -4,6 +4,10 @@ window.document.getElementById("submit").addEventListener("click", function() {
     // redirectToFeed(); //inverter dps, provisório
 });
 
+document.getElementById("register").addEventListener("click", function() {    
+    redirectToRegister(); 
+});
+
 async function main(){
     let url = "https://apex.oracle.com/pls/apex/projeto_7/apigym/"
     let credential = null;
@@ -41,6 +45,7 @@ async function main(){
     }else{
         errorMessage.style.display = "flex";
         errorMessage.textContent = "Usuário inválido.";
+        redirectToRegister();
     }
 }
 
@@ -66,6 +71,12 @@ async function verifyCredentials(url, params) {
 function redirectToFeed() {
     window.location.href = "../html/feed.html";
 }
+
+function redirectToRegister(){
+    window.location.href = "../html/cadastro.html";
+
+}
+
 
 async function localStorageData(data) {
     localStorage.setItem("dataUser", JSON.stringify(data));
