@@ -61,8 +61,16 @@ async function verifyCredentials(url, params) {
 
     const data = await response.json(); 
 
+    var dadosuser;
+
+    if (data.items[0]  == undefined) {
+        dadosuser = null;
+    } else {
+        dadosuser = data.items[0];
+    }
+
     return { "status": response.status,
-            "userData": data.items[0]
+            "userData": dadosuser,
         }
     }
 
