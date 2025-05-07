@@ -45,7 +45,6 @@ async function main(){
     }else{
         errorMessage.style.display = "flex";
         errorMessage.textContent = "Usuário inválido.";
-        redirectToRegister();
     }
 }
 
