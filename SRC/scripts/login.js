@@ -80,7 +80,7 @@ function redirectToFeed() {
 }
 
 function redirectToRegister(){
-    window.location.href = "../html/cadastro.html";
+    window.location.href = "../\\\\/cadastro.html";
 
 }
 

@@ -117,3 +117,7 @@
     color: #080808;
     text-decoration: underline;
 }
+
+.oculto{
+    display: none;
+}

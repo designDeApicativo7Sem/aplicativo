@@ -80,3 +80,8 @@ nextMonthButton.addEventListener('click', goToNextMonth);
 
 // Gera o calendário inicial com o mês atual
 generateCalendar(currentMonth, currentYear);
+
+
+document.getElementById("home").addEventListener("click", () => {
+    window.location.href = "../html/feed.html";
+});

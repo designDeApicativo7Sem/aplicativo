@@ -1,7 +1,17 @@
-window.getElementById("submit").addEventListener("click", async function () {     
-});
+document.getElementById("submit").addEventListener("click", async function () {
+// var response = createAccount()
 
-    let url = "https://apex.oracle.com/pls/apex/projeto_7/apigym/"    
+alert("usuario cadastrado com sucesso");
+window.location.href = "../html/login.html";
+console.log(response)
+}
+);
+
+
+
+async function createAccount(){
+    
+    let url = "https://apex.oracle.com/pls/apex/projeto_7/apigym/"
     let params = null;
 
     const userData = {
@@ -11,17 +21,20 @@ window.getElementById("submit").addEventListener("click", async function () {
         cpf: document.getElementById("cpf").value
     };
 
-const response = await fetch(`${url}usuario/?${params.toString()}`, {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-    },
-});
+    params = new URLSearchParams(userData);
 
-const data = await response.json(); 
+    const response = await fetch(`${url}usuario/?${params.toString()}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+    });
 
-return { "status": response.status,
+    const data = await response.json();
+
+    return {
+        "status": response.status,
         "userData": data.items[0]
     }
-
+}

@@ -44,3 +44,8 @@ async function sendPost() {
    
     
     }
+
+
+document.getElementById("account").addEventListener("click", () => {
+    window.location.href = "../html/calendario.html";
+});
